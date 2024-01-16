@@ -1,0 +1,41 @@
+﻿<Window x:Class="Kidd_Esports_v3.Events"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kidd_Esports_v3"
+        mc:Ignorable="d"
+        Title="Events" Height="480" Width="800">
+    <!--Sets Column and Grid parameters for window-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <!-- Stackpanel displays and stacks each data type textbox-->
+        <StackPanel Grid.Column="1" Grid.Row="1" Margin="11">
+            <Label>Id</Label>
+            <TextBox x:Name="txtId" IsReadOnly="True"/>
+            <Label>Event Name:</Label>
+            <TextBox x:Name="txtEventName"/>
+            <Label>Event Location:</Label>
+            <TextBox x:Name="txtEventLocation"/>
+            <Label>Event Date:</Label>
+            <TextBox x:Name="txtEventDate"/>
+            <!-- Creates save button within stackpanel on UI -->
+            <Button x:Name="btnSave" Margin="11,15" Click="btnSave_Click">SAVE</Button>
+        </StackPanel>
+         <!--Data grid created within UI-->
+        <DataGrid x:Name="Eventsdgv" Margin="12" Grid.Row="1"
+        SelectionChanged="Eventsdgv_ChangedSelection" IsReadOnly="True"/>
+        <!-- Creates close, new and delete buttons-->
+        <Button x:Name="btnClose" Grid.Row="2" Grid.Column="2" Width="140" Height="25" HorizontalAlignment="Center" Click="btnClose_Click">Close</Button>
+        <Button x:Name="btnNew" Grid.Row="2" Width="140" Height="35" Click="btnNew_Click" HorizontalAlignment="Left" Margin="12,14,0,13" >New</Button>
+        <Button x:Name="btnDelete" Grid.Row="2" Width="140" Height="35" Click="btnDelete_Click" HorizontalAlignment="Right" Margin="0,10,10,17">Delete</Button>
+    </Grid>
+</Window>

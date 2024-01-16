@@ -1,0 +1,31 @@
+﻿<Window x:Name="window" x:Class="Kidd_Esports_v3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kidd_Esports_v3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="510" Width="550">
+    <Grid Background="DarkCyan" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="btnTeamDetails" Click="btnTeamDetails_Click" Width="180" Height="75" Background="LightYellow">Team Details</Button>
+        <Button x:Name="btnEvents" Grid.Column="1" Click="btnEvents_Click" Width="180" Height="75" Background="LightYellow">Events</Button>
+        <Button x:Name="btnGamesPlayed" Grid.Row="2" Click="btnGamesPlayed_Click" Width="180" Height="75" Background="LightYellow">Games Played</Button>
+        <Button x:Name="btnTeamResults" Grid.Row="2" Grid.Column="1" Click="btnTeamResults_Click" Width="180" Height="75" Background="LightYellow">Team Results</Button>
+        <Button x:Name="btnReports" Grid.Row="4 " Grid.Column="0" Click="btnReports_Click" Width="180" Height="75" Background="LightYellow" >Reports</Button>
+        <Button x:Name="btnExit" Grid.Row="4" Grid.Column="1" Click="btnExit_Click" Width="180" Height="75" Background="White" >Exit</Button>
+
+    </Grid>
+
+</Window>

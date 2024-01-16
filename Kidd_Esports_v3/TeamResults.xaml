@@ -1,0 +1,27 @@
+﻿<Window x:Class="Kidd_Esports_v3.TeamResults"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kidd_Esports_v3"
+        mc:Ignorable="d"
+        Title="TeamResults" Height="450" Width="800">
+    <Grid>
+        <!-- Sets grid's column and row parameters -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="3.2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <!-- Creates and displays data grid -->
+        <DataGrid x:Name="TeamResultsdgv" Margin="20" Grid.ColumnSpan="3" IsReadOnly="True"/>
+        <!-- Creates buttons and sets parameters -->
+        <Button x:Name="btnNew" Grid.Row="1" Grid.ColumnSpan="2"  Click="btnNew_Click" Margin="20,5,492,15" >New</Button>
+        <Button x:Name="btnClose" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Click="btnClose_Click" Margin="492,5,20,15">Close</Button>
+        <Button x:Name="btnDelete" Click="btnDelete_Click" Margin="179,5,179,15" Grid.Row="1" Grid.Column="1">Delete</Button>
+    </Grid>
+</Window>
